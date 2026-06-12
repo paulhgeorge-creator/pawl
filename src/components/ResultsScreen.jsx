@@ -9,7 +9,7 @@ const DIMENSION_LABELS = {
   reactivity:   "Reactivity",
 };
 
-export default function ResultsScreen({ result, petInfo, species, onRestart }) {
+export default function ResultsScreen({ result, petInfo, species, onRestart, doneLabel }) {
   const accent = species === "cat" ? theme.colors.cat : theme.colors.dog;
   const light  = species === "cat" ? theme.colors.catLight : theme.colors.dogLight;
 
@@ -236,7 +236,7 @@ export default function ResultsScreen({ result, petInfo, species, onRestart }) {
               fontFamily:   theme.fonts.body,
             }}
           >
-            Start a new assessment
+            {doneLabel ?? "Start a new assessment"}
           </button>
         </div>
       </div>
